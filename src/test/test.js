@@ -2,7 +2,7 @@ const describe = require('mocha').describe
 const it = require('mocha').it
 const expect = require('chai').expect
 
-// require('../')
+// TODO: Implement tests for pretty much everything
 
 describe('Outer Test Group', () => {
   describe('Inner Test Group', () => {

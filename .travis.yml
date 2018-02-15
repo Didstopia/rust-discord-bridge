@@ -1,0 +1,13 @@
+# Use a Node.js specific build environment
+language: node_js
+
+# Which Node.js versions to test against
+node_js:
+  - "node" # Latest stable Node.js release
+  - "lts/*" # Latest LTS Node.js release
+  - "8" # Latest 8.x release
+
+# Cache npm modules
+cache:
+  directories:
+    - "node_modules"

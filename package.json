@@ -1,0 +1,44 @@
+{
+  "name": "rust-discord-bridge",
+  "version": "0.1.0",
+  "description": "A chat bridge between Rust (the game) and Discord. ",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src",
+    "dev": "nodemon src",
+    "test": "mocha --reporter spec src/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Didstopia/rust-discord-bridge.git"
+  },
+  "keywords": [
+    "rust",
+    "discord",
+    "bridge",
+    "chat",
+    "playrust",
+    "extension",
+    "extend",
+    "send",
+    "data",
+    "message"
+  ],
+  "author": "Didstopia <support@didstopia.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Didstopia/rust-discord-bridge/issues"
+  },
+  "homepage": "https://github.com/Didstopia/rust-discord-bridge#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.1",
+    "nodemon": "^1.14.12"
+  },
+  "dependencies": {
+    "discord.js": "^11.3.0",
+    "erlpack": "github:discordapp/erlpack",
+    "uws": "^9.14.0",
+    "zlib-sync": "^0.1.4"
+  }
+}

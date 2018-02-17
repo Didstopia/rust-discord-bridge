@@ -6,7 +6,10 @@ class Command {
       throw new Error('Command required property "name" not specified')
     }
 
+    // Hide the logger from JSON.stringify
+    Object.defineProperty(this, 'logger', { value: 'static', writable: true })
     this.logger = logger
+
     this.name = name
     this.description = description
     this.adminOnly = adminOnly

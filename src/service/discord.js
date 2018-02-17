@@ -1,8 +1,7 @@
 const Service = require('./service')
-
 const Commands = require('../models/commands')
-
 const DiscordJS = require('discord.js')
+const DiscordMessage = require('../models/messages/discordMessage')
 
 class Discord extends Service {
   constructor (token, channel) {
@@ -23,6 +22,8 @@ class Discord extends Service {
     })
     this.client.on('message', message => {
       // FIXME: We also need to ignore messages sent by OTHER bots!
+
+      let discordMessage = new DiscordMessage(message)
 
       // Ignore messages sent by the bot
       if (message.client.user.id === message.author.id) {
@@ -53,7 +54,7 @@ class Discord extends Service {
 
         // Handle other messages
         else {
-          self.emit('message', message)
+          self.emit('message', discordMessage)
         }
       }
     })

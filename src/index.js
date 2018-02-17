@@ -14,17 +14,17 @@ Discord.on('ready', () => {
 })
 Discord.on('command', (command, err) => {
   if (err) {
-    logger.debug('Discord command error received: ' + err)
+    logger.debug('Discord command error received: ', err)
 
     // TODO: Send an error to the user
   } else {
-    logger.debug('Discord command received: ' + command)
+    logger.debug('Discord command received: ', command)
 
     // TODO: Process the command
   }
 })
-Discord.on('message', message => {
-  logger.debug('Discord message received: ' + message)
+Discord.on('message', discordMessage => {
+  logger.debug('Discord message received: ', discordMessage)
 
   // TODO: Redirect the message to Rust
 })
